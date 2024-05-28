@@ -1,0 +1,185 @@
+
+
+POJO - Plain Old Java Object
+
+
+Serialization -> 
+
+
+
+POJO vs MOJO
+
+MOJO-> represents a goal in Maven
+
+part of Maven Plugin
+
+Extends AbstractMojo
+
+Annotations-> @Mojo
+
+Execution 
+
+
+
+
+
+Stream-> Sequence of data and data are composed of bytes.
+
+
+Stream supports all types of objs,data-types,chars,files, etc
+
+
+
+System.out
+System.in
+System.err
+
+
+Input Stream:
+
+FileInput Stream
+Byte Array Input
+PipeInput
+ObjectInput 
+
+Data Input
+FileInput
+BufferInput
+PushBackInput
+
+
+Output Streams:
+FileOutputStream
+ObjectOutput
+DataOutput
+PipeOutput
+ByteArrayOutput
+BufferOutput
+PushBackOutput
+
+
+
+FileOutputStream:  output stream to write data into file.
+
+i. public void write(int)throws IOException : used to write a byte to the current output stream.
+ii. public void close()throws IOException : used to close the current output stream.
+
+
+
+
+DataOutputStream : allows an application to write primitive java data types to o/p stream in a machine-independent way.
+
+UTF -8 -> 8 bit UTF
+
+DataOutputStream.writeUTF(String str) -> writes a string to underlying o/p stream using modified UTF-8 encoding.
+
+
+
+Serialization: 
+RMI,EJB,Spring,Hibernate,JMS tech
+
+writing the state of an object into byte stream.
+
+i.   persist / store obj to a file
+ii.  sending the objs over a network
+iii. save the data to DB
+
+serializable interface in java.io
+ObjectOutputStream works with FileOutputStream
+
+De-Serialization -> process of converting a byte stream back into a copy of original obj.
+
+we can serialize an obj in one platform and deserialize it on a diff platform.
+
+writeObject()-> serialize the obj
+readObject()-> de-serialize the obj
+
+Advantage:
+marshalling.
+
+
+File -> abstract data type
+named loc 
+creating a new file,getting info,writing data into file,reading from a file ,deleting a file etc
+
+
+
+
+Thread
+
+one single task at a time
+
+ordering a food:
+follow a process:
+i.   Login to account
+ii.  Browse/choose what food you wants to order
+iii. will show few restaurant who serves momo
+iv.  select a particular restro
+v.   ask for payment mode 
+vi. order is completed/processed 
+vii. Reach to your doorstop
+
+5 req -> 5 thread / more than 5 thread 
+
+
+Thread is an independent path of execution within a program.
+
+JVM -> manages the thread/controls the thread
+scheduled the thread based on priority
+
+who checks the life-cycle 
+
+MultiThreading - executes multiple threads simultaneously.
+
+thread always share a common memory area.
+
+
+Life-Cycle of Thread:
+i. new - create an instance of Thread class before invokation of start()
+ii. Runnable - after the invokation of start() but thread scheduler has not selected to be the running thread.
+iii. Running -> thread scheduler has selected
+iv. Blocked/Non-Runnable-> thread is still alive,currently not eligible to run
+v. Terminated/Completed/dead -> dead state when run() exits
+
+JVM -> run() than start()
+
+java.lang
+
+Ways to create Thread:
+
+i. By extensing Thread class
+ii. By implementing Runnable interface
+
+
+ThreadScheduler -> part of JVM that decides which thread should run
+
+Only one thread at a time can run in a single process.
+
+preemptive(based on priority) and time slicing(execution of task for a predefined slice of time)
+
+sleep(long millisecs)
+join() 
+join(long milliseconds)
+
+currentThread()-> return reference to the currently exceuting thread.(id,name.priority)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
